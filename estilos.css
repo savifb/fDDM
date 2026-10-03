@@ -59,12 +59,18 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. RESET MODERNO E CONFIGURAÇÕES GERAIS
+   2. RESET E CONFIGURAÇÕES GERAIS
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+
 }
 
 html {
@@ -131,6 +137,7 @@ ul {
 .main-area {
   grid-area: main;
   width: 100%;
+  height: 100%;
 }
 
 .footer-area {
@@ -506,7 +513,7 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
-   6. SEÇÃO SOBRE A EMPRESA (COPYWRITING & HISTÓRIA COM GRID)
+   6. SEÇÃO SOBRE A EMPRESA (DESCRIÇÃO, IMAGEM E PILLARES DA MARCA)
    -------------------------------------------------------------------------- */
 .section-about {
   padding: clamp(4rem, 8vw, 7rem) 0;
@@ -645,18 +652,12 @@ ul {
    7. SEÇÃO DE SERVIÇOS (DISPOSIÇÃO COM CSS GRID E CARROSSEL COM FLEXBOX)
    -------------------------------------------------------------------------- */
 .section-services {
-  padding: clamp(4rem, 8vw, 7rem) 0;
-  background-color: var(--color-bg-main);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Disposição da Seção de Serviços usando CSS Grid */
-.services-grid-layout {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 2.5rem;
 }
+
+/* Disposição da Seção de Serviços usando CSS Grid */
 
 /* Célula do Cabeçalho de Serviços */
 .services-header-cell {
@@ -717,6 +718,9 @@ ul {
 .services-carousel-wrapper {
   width: 100%;
   position: relative;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
 }
 
 .services-carousel-track {
@@ -746,7 +750,14 @@ ul {
   border-radius: 4px;
 }
 
+
 /* Card do Serviço (Item Flexbox) */
+
+.conteiner_ajeitar{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 .service-card {
   flex: 0 0 clamp(290px, 31vw, 360px);
   scroll-snap-align: start;

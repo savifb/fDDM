@@ -40,14 +40,3 @@ fDDM/
 - **Acessibilidade (a11y):** Marcação semântica (`<header>`, `<nav>`, `<main>`, `<article>`, `<figure>`, `<footer>`), atributos `aria-label`, estados `:focus-visible` bem definidos e contraste validado WCAG.
 
 ---
-
-## 💻 Como Visualizar o Projeto
-
-Basta abrir o arquivo [index.html](file:///c:/Users/savio/projetos/fDDM/index.html) em qualquer navegador web moderno:
-
-- **Via duplo clique no explorador de arquivos:** Localize `index.html` na pasta do projeto e dê dois cliques.
-- **Via VS Code / Live Server:** Clique com o botão direito em `index.html` e selecione *Open with Live Server*.
-- **Via navegador pelo terminal:**
-  ```powershell
-  Start-Process "index.html"
-  ```
