@@ -1,0 +1,1198 @@
+// ==========================================================================
+// DOCERIA DA MARTA - COMPONENTES (BEM & MIXINS) (_componentes.scss)
+// ==========================================================================
+@use 'variaveis' as *;
+
+// --------------------------------------------------------------------------
+// 1. COMPONENTE: NAVBAR & NAVEGAÇÃO
+// --------------------------------------------------------------------------
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @include glass-effect(rgba(255, 248, 244, 0.95), 12px, $color-border);
+  border-bottom: 1px solid $color-border;
+  transition: background-color $transition-fast;
+
+  &__container,
+  .nav-container {
+    @include flex-box(row, space-between, center);
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: 1rem clamp(1rem, 4vw, 2.5rem);
+  }
+
+  &__links,
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.25rem, 2.5vw, 2.25rem);
+
+    @include respond-to('tablet') {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: calc(20rem + 2rem);
+      height: 100vh;
+      background-color: $color-surface;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+      transition: right $transition-normal;
+      z-index: 99;
+      padding: 2rem;
+
+      &.active,
+      &--active {
+        right: 0;
+      }
+    }
+  }
+
+  &__item,
+  .nav-item {
+    font-weight: 500;
+    font-size: $font-size-sm;
+    color: $color-text-main;
+    position: relative;
+    padding: 0.35rem 0;
+
+    @include respond-to('tablet') {
+      font-size: 1.15rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: $color-primary;
+      transition: width $transition-fast;
+    }
+
+    &:hover {
+      color: $color-primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &--cta,
+    &.nav-btn-cta {
+      background-color: $color-primary;
+      color: $color-text-light !important;
+      padding: 0.65rem 1.4rem;
+      border-radius: $radius-full;
+      font-weight: 600;
+      box-shadow: $shadow-colored;
+      transition: all $transition-fast;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $color-primary-hover;
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(156, 61, 84, 0.3);
+      }
+    }
+  }
+
+  &__menu-btn,
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+
+    @include respond-to('tablet') {
+      display: flex;
+    }
+
+    .bar,
+    &__bar {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $color-primary;
+      border-radius: 2px;
+      transition: all $transition-normal;
+    }
+
+    &.open,
+    &--open {
+      .bar:nth-child(1),
+      &__bar:nth-child(1) {
+        transform: translateY(calc(10.5px)) rotate(45deg);
+      }
+
+      .bar:nth-child(2),
+      &__bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .bar:nth-child(3),
+      &__bar:nth-child(3) {
+        transform: translateY(calc(-10.5px)) rotate(-45deg);
+      }
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// 2. COMPONENTE: LOGOTIPO DA MARCA (BEM)
+// --------------------------------------------------------------------------
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+
+  &__icon,
+  .logo-icon {
+    font-size: 2.25rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 8px rgba(156, 61, 84, 0.25));
+    transition: transform $transition-fast;
+  }
+
+  &:hover {
+    .brand-logo__icon,
+    .logo-icon {
+      transform: scale(1.1) rotate(-6deg);
+    }
+  }
+
+  &__text,
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title,
+  .logo-title {
+    font-family: $font-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-primary;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle,
+  .logo-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $color-secondary;
+    font-weight: 600;
+  }
+}
+
+// --------------------------------------------------------------------------
+// 3. COMPONENTE: BOTÕES (BEM & MIXINS)
+// --------------------------------------------------------------------------
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 2rem;
+  border-radius: $radius-full;
+  font-weight: 600;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: all $transition-fast;
+  border: none;
+  text-decoration: none;
+
+  &--primary,
+  &-primary {
+    @include button-style($color-primary, $color-text-light, $color-primary-hover, $shadow-colored, $shadow-colored-hover);
+  }
+
+  &--outline,
+  &-outline {
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+
+    &:hover {
+      background-color: $color-primary-light;
+      color: $color-primary-hover;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--block,
+  &-block {
+    width: 100%;
+    padding: 1.05rem;
+    margin-top: 0.5rem;
+  }
+
+  &__arrow,
+  .btn-arrow {
+    transition: transform $transition-fast;
+  }
+
+  &:hover {
+    .btn__arrow,
+    .btn-arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// 4. COMPONENTE: HERO BANNER (UX & BEM)
+// --------------------------------------------------------------------------
+.hero-banner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 2.5rem);
+
+  @include respond-to('desktop') {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  &__content,
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include respond-to('desktop') {
+      align-items: center;
+    }
+  }
+
+  &__badge,
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $color-primary-light;
+    color: $color-primary;
+    padding: 0.45rem 1.1rem;
+    border-radius: $radius-full;
+    font-size: $font-size-xs;
+    font-weight: 600;
+    width: fit-content;
+    border: 1px solid rgba(156, 61, 84, 0.15);
+  }
+
+  &__title,
+  .hero-title {
+    font-family: $font-serif;
+    font-size: $font-size-2xl;
+    line-height: 1.15;
+    color: $color-text-main;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+
+    .highlight-text,
+    &__highlight {
+      color: $color-primary;
+      font-style: italic;
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  &__description,
+  .hero-description {
+    font-size: clamp(1rem, 1.3vw, 1.18rem);
+    color: $color-text-muted;
+    max-width: 36rem;
+    line-height: 1.7;
+
+    @include respond-to('desktop') {
+      margin: 0 auto;
+    }
+  }
+
+  &__cta-group,
+  .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+    margin-top: 0.5rem;
+
+    @include respond-to('desktop') {
+      justify-content: center;
+    }
+  }
+
+  &__trust-bar,
+  .hero-trust-bar {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    padding-top: 1.5rem;
+    border-top: 1px solid $color-border;
+    margin-top: 1rem;
+
+    @include respond-to('desktop') {
+      justify-content: center;
+      width: 100%;
+    }
+
+    @include respond-to('mobile') {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  &__media,
+  .hero-media {
+    position: relative;
+  }
+
+  &__image-wrapper,
+  .hero-image-wrapper {
+    position: relative;
+    border-radius: $radius-lg;
+    overflow: visible;
+
+    @include respond-to('desktop') {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    &:hover {
+      .hero-banner__img,
+      .hero-img {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  &__img,
+  .hero-img {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    transition: transform $transition-normal;
+
+    @include respond-to('desktop') {
+      height: 22rem;
+    }
+  }
+}
+
+// Elementos da Barra de Confiança
+.trust-item,
+.hero-banner__trust-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-number,
+.hero-banner__trust-number {
+  font-family: $font-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: $color-secondary;
+  line-height: 1.2;
+}
+
+.trust-label,
+.hero-banner__trust-label {
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  font-weight: 500;
+}
+
+.trust-divider,
+.hero-banner__trust-divider {
+  width: 1px;
+  height: 2.25rem;
+  background-color: $color-border;
+
+  @include respond-to('mobile') {
+    display: none;
+  }
+}
+
+// Tags Flutuantes com Animação
+.floating-tag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  @include glass-effect(rgba(255, 255, 255, 0.95), 10px, rgba(240, 217, 208, 0.8));
+  padding: 0.75rem 1.25rem;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  animation: float 4s ease-in-out infinite;
+
+  strong {
+    display: block;
+    font-size: $font-size-xs;
+    color: $color-text-main;
+  }
+
+  small {
+    font-size: 0.75rem;
+    color: $color-text-muted;
+  }
+
+  .tag-emoji,
+  &__emoji {
+    font-size: 1.6rem;
+  }
+
+  &--1,
+  &-1 {
+    top: -1.25rem;
+    left: -1.5rem;
+
+    @include respond-to('tablet') {
+      top: -0.75rem;
+      left: 0;
+    }
+  }
+
+  &--2,
+  &-2 {
+    bottom: 2rem;
+    right: -1.5rem;
+    animation-delay: 2s;
+
+    @include respond-to('tablet') {
+      bottom: -1rem;
+      right: 0;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// 5. COMPONENTE: SEÇÃO SOBRE A EMPRESA
+// --------------------------------------------------------------------------
+.about-media {
+  position: relative;
+
+  @include respond-to('desktop') {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
+  &__card,
+  .about-image-card {
+    position: relative;
+    border-radius: $radius-lg;
+  }
+
+  &__img,
+  .about-img {
+    width: 100%;
+    height: 32rem;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+
+    @include respond-to('desktop') {
+      height: 24rem;
+    }
+  }
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -1.75rem;
+  right: -1.25rem;
+  background: linear-gradient(135deg, $color-primary, $color-primary-hover);
+  color: $color-text-light;
+  padding: 1.5rem;
+  border-radius: $radius-md;
+  box-shadow: $shadow-colored;
+  text-align: center;
+  max-width: 12rem;
+
+  @include respond-to('mobile') {
+    position: static;
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .exp-years {
+    display: block;
+    font-family: $font-serif;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .exp-text {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-top: 0.25rem;
+  }
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: $color-secondary;
+  margin-bottom: 0.65rem;
+}
+
+.section-title {
+  font-family: $font-serif;
+  font-size: $font-size-xl;
+  line-height: 1.25;
+  color: $color-text-main;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.copy-body {
+  p {
+    color: $color-text-muted;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .lead-text {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: $color-text-main;
+    line-height: 1.7;
+  }
+}
+
+// Pilares da Marca
+.brand-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid $color-border;
+
+  &__item,
+  .pillar-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__icon,
+  .pillar-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    background-color: $color-surface-soft;
+    width: 3.25rem;
+    height: 3.25rem;
+    @include flex-center;
+    border-radius: $radius-md;
+  }
+
+  &__title,
+  .pillar-title {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: $color-text-main;
+    margin-bottom: 0.25rem;
+  }
+
+  &__desc,
+  .pillar-desc {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin-bottom: 0;
+  }
+}
+
+// --------------------------------------------------------------------------
+// 6. COMPONENTE: SEÇÃO DE SERVIÇOS & CARROSSEL FLEXBOX
+// --------------------------------------------------------------------------
+.services-header-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: $color-text-muted;
+  line-height: 1.65;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+// Controles do Carrossel
+.carousel-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+
+  @include respond-to('mobile') {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__arrow,
+  .carousel-arrow {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid $color-border;
+    background-color: $color-surface;
+    color: $color-primary;
+    @include flex-center;
+    cursor: pointer;
+    box-shadow: $shadow-sm;
+    transition: all $transition-fast;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-text-light;
+      border-color: $color-primary;
+      transform: translateY(-2px);
+      box-shadow: $shadow-colored;
+    }
+  }
+
+  &__hint,
+  .carousel-hint {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    font-weight: 500;
+  }
+}
+
+// Wrapper e Trilha do Carrossel
+.services-carousel-wrapper {
+  width: 100%;
+  position: relative;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.services-carousel-track {
+  display: flex;
+  gap: 1.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0.5rem 2.25rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: $color-secondary transparent;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(240, 217, 208, 0.4);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+    border-radius: 4px;
+  }
+}
+
+// Card de Serviço (BEM)
+.service-card {
+  flex: 0 0 clamp(290px, calc(30vw + 10px), 360px);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-surface;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  border: 1px solid $color-border;
+  transition: all $transition-normal;
+
+  @include respond-to('mobile') {
+    flex: 0 0 88vw;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+    border-color: rgba(156, 61, 84, 0.3);
+
+    .service-card__img,
+    .service-img {
+      transform: scale(1.08);
+    }
+  }
+
+  &__media,
+  .service-media {
+    position: relative;
+    height: 14rem;
+    overflow: hidden;
+  }
+
+  &__img,
+  .service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-normal;
+  }
+
+  &__tag,
+  .service-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: $color-primary;
+    font-weight: 700;
+    font-size: $font-size-xs;
+    padding: 0.35rem 0.85rem;
+    border-radius: $radius-full;
+    box-shadow: $shadow-sm;
+  }
+
+  &__info,
+  .service-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.5rem;
+  }
+
+  &__category,
+  .service-category {
+    font-size: $font-size-xs;
+    color: $color-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  &__name,
+  .service-name {
+    font-family: $font-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-text-main;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  &__desc,
+  .service-desc {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  &__features,
+  .service-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed $color-border;
+
+    li {
+      font-size: 0.84rem;
+      color: $color-text-main;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &::before {
+        content: '✓';
+        color: $color-primary;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__link,
+  .service-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    color: $color-primary;
+    transition: gap $transition-fast, color $transition-fast;
+
+    &:hover {
+      color: $color-primary-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Cards de Estatísticas / Diferenciais
+.service-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: $color-surface;
+  padding: 1.5rem;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+
+  .stat-icon {
+    font-size: 2rem;
+    background-color: $color-surface-soft;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: $radius-md;
+    @include flex-center;
+    flex-shrink: 0;
+  }
+
+  .stat-text {
+    h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: $color-text-main;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      color: $color-text-muted;
+      line-height: 1.4;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// 7. COMPONENTE: DEPOIMENTOS (BEM)
+// --------------------------------------------------------------------------
+.testimonials-header {
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto 3.5rem;
+}
+
+.testimonial-card {
+  background-color: $color-bg-main;
+  padding: 2.25rem;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-sm;
+  @include card-lift(-5px, $shadow-md);
+
+  &__quote-icon,
+  .card-quote-icon {
+    font-family: $font-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: rgba(156, 61, 84, 0.15);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    user-select: none;
+  }
+
+  &__stars,
+  .rating-stars {
+    color: $color-star;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  &__text,
+  .testimonial-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: $color-text-muted;
+    font-style: italic;
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+  }
+
+  &__author,
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid $color-border;
+  }
+
+  &__avatar,
+  .author-avatar {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid $color-primary;
+  }
+
+  &__name,
+  .author-name {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: $color-text-main;
+  }
+
+  &__event,
+  .author-event {
+    display: block;
+    font-size: $font-size-xs;
+    color: $color-secondary;
+    font-weight: 500;
+  }
+}
+
+// --------------------------------------------------------------------------
+// 8. COMPONENTE: CONTATO & FORMULÁRIO (BEM)
+// --------------------------------------------------------------------------
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-lead {
+  font-size: 1.1rem;
+  color: $color-text-muted;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.channel-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: $color-surface;
+  padding: 1.25rem 1.5rem;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+
+  &__icon,
+  .channel-icon {
+    font-size: 1.75rem;
+    background-color: $color-surface-soft;
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: $radius-md;
+    @include flex-center;
+    flex-shrink: 0;
+  }
+
+  strong {
+    display: block;
+    font-size: 0.95rem;
+    color: $color-text-main;
+  }
+
+  p {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+  }
+}
+
+.contact-form-panel {
+  background-color: $color-surface;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-md;
+}
+
+.form-title {
+  font-family: $font-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-text-main;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__row,
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @include respond-to('tablet') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__group,
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    label {
+      font-size: $font-size-xs;
+      font-weight: 600;
+      color: $color-text-main;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid $color-border;
+      border-radius: $radius-sm;
+      background-color: $color-bg-main;
+      color: $color-text-main;
+      transition: border-color $transition-fast, box-shadow $transition-fast;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px rgba(156, 61, 84, 0.15);
+      }
+    }
+  }
+
+  &__security-note,
+  .form-security-note {
+    font-size: 0.8rem;
+    color: $color-text-muted;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+// --------------------------------------------------------------------------
+// 9. COMPONENTE: RODAPÉ (FOOTER BEM)
+// --------------------------------------------------------------------------
+.footer-logo,
+.footer-area__logo {
+  .brand-logo__title,
+  .logo-title {
+    color: #FEE8EC;
+  }
+}
+
+.footer-about,
+.footer-area__about {
+  color: $color-footer-muted;
+  font-size: $font-size-sm;
+  line-height: 1.7;
+  margin: 1.25rem 0 1.75rem;
+  max-width: 26rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+
+  &__btn,
+  .social-btn {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: $color-text-light;
+    padding: 0.5rem 1rem;
+    border-radius: $radius-full;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    transition: all $transition-fast;
+
+    &:hover {
+      background-color: $color-primary;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.footer-heading,
+.footer-area__heading {
+  font-family: $font-serif;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-nav-list,
+.footer-area__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  a {
+    color: $color-footer-muted;
+    font-size: $font-size-sm;
+
+    &:hover {
+      color: $color-accent;
+      padding-left: 4px;
+    }
+  }
+}
+
+.hours-col,
+.footer-area__hours {
+  p {
+    color: $color-footer-muted;
+    font-size: $font-size-sm;
+    margin-bottom: 0.5rem;
+  }
+
+  strong {
+    color: #FFFFFF;
+  }
+}
+.footer-credit,
+.footer-area__credit {
+  color: inherit;
+}
+
