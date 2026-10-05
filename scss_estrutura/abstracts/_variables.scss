@@ -1,0 +1,35 @@
+:root {
+  --color-primary: #9C3D54;
+  --color-primary-hover: #7D283E;
+  --color-primary-light: #FDF2F4;
+  --color-secondary: #D48149;
+  --color-secondary-hover: #B7652E;
+  --color-accent: #E8A87C;
+  --color-bg-main: #FFF8F4;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #FFF1EB;
+  --color-border: #F0D9D0;
+  --color-text-main: #2D1D1B;
+  --color-text-muted: #735D58;
+  --color-text-light: #FDFBF9;
+  --font-serif: Playfair Display, Georgia, serif;
+  --font-sans: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-base: 1.0625rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: clamp(1.75rem, 3vw, 2.25rem);
+  --font-size-2xl: clamp(2.25rem, 5vw, 3.5rem);
+  --shadow-sm: 0 4px 12px rgba(92, 40, 31, 0.05);
+  --shadow-md: 0 10px 28px rgba(92, 40, 31, 0.08);
+  --shadow-lg: 0 20px 40px rgba(92, 40, 31, 0.12);
+  --shadow-colored: 0 12px 28px rgba(156, 61, 84, 0.22);
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --container-max: 75rem;
+}

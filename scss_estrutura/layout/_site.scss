@@ -1,0 +1,43 @@
+.site-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header-area {
+  grid-area: header;
+  width: 100%;
+}
+
+.main-area {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-area {
+  grid-area: footer;
+  width: 100%;
+  background-color: #241412;
+  color: #EDE3DF;
+  padding-top: 5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.conteiner_ajeitar {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 2vw + 0.5rem, 2.5rem);
+  padding-right: clamp(1rem, 2vw + 0.5rem, 2.5rem);
+
+}
