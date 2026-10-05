@@ -1,6 +1,6 @@
 # 🍰 Doceria da Marta - Landing Page Institucional
 
-Uma landing page moderna, acolhedora e responsiva para a confeitaria artesanal **Doceria da Marta**, desenvolvida com foco em padrões modernos de **UX Design**, **Copywriting persuasivo** e arquitetura limpa em **HTML5 Semântico** e **CSS3 (Grid & Flexbox)**.
+Uma landing page moderna, acolhedora e responsiva para a confeitaria artesanal **Doceria da Marta**, desenvolvida com foco em padrões modernos de **UX Design**, **Copywriting persuasivo** e arquitetura limpa em **HTML5 Semântico** e **CSS3 (Grid & Flexbox)**. - Criada testando o uso da IA Antigravity do Google.
 
 ---
 

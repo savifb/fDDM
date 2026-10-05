@@ -1,0 +1,17 @@
+{
+  "name": "doceria-da-marta-frontend",
+  "version": "1.0.0",
+  "description": "Frontend estruturado e escalável para Doceria da Marta com Sass/SCSS, BEM e CSS Grid",
+  "scripts": {
+    "build:css": "sass scss/estilos.scss css/estilos.css",
+    "watch:css": "sass --watch scss:css"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "bem",
+    "frontend"
+  ],
+  "author": "",
+  "license": "ISC"
+}
