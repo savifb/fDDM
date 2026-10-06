@@ -24,28 +24,28 @@
   <header class="header-area" id="inicio">
     <!-- Barra de Navegação -->
     <nav class="navbar" aria-label="Navegação Principal">
-      <div class="nav-container">
+      <div class="navbar__container">
         <a href="#inicio" class="brand-logo" aria-label="Doceria da Marta - Página inicial">
-          <span class="logo-icon" aria-hidden="true">🎂</span>
-          <div class="logo-text">
-            <span class="logo-title">Doceria da Marta</span>
-            <span class="logo-subtitle">Confeitaria Afetiva</span>
+          <span class="brand-logo__icon" aria-hidden="true">🎂</span>
+          <div class="brand-logo__text">
+            <span class="brand-logo__title">Doceria da Marta</span>
+            <span class="brand-logo__subtitle">Confeitaria Afetiva</span>
           </div>
         </a>
 
         <!-- Botão Menu Mobile (Hambúrguer) -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
+        <button class="navbar__menu_btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
 
         <!-- Links de Navegação -->
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#sobre" class="nav-item">Sobre a Empresa</a></li>
-          <li><a href="#servicos" class="nav-item">Serviços</a></li>
-          <li><a href="#depoimentos" class="nav-item">Depoimentos</a></li>
-          <li><a href="#contato" class="nav-item nav-btn-cta">Contate-nos</a></li>
+        <ul class="navbar__links" id="navLinks">
+          <li><a href="#sobre" class="navbar__item">Sobre a Empresa</a></li>
+          <li><a href="#servicos" class="navbar__item">Serviços</a></li>
+          <li><a href="#depoimentos" class="navbar__item">Depoimentos</a></li>
+          <li><a href="#contato" class="navbar__item navbar__item--cta">Contate-nos</a></li>
         </ul>
       </div>
     </nav>
@@ -66,11 +66,11 @@
 
         <!-- Chamada para Ação (CTA) com Princípios de UX & Conversão -->
         <div class="hero-cta-group">
-          <a href="#servicos" class="btn btn-primary">
+          <a href="#servicos" class="btn btn--primary">
             <span>Conheça Nossos Doces</span>
-            <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg class="btn__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#contato" class="btn btn-outline">
+          <a href="#contato" class="btn btn--outline">
             <span>Solicitar Orçamento</span>
           </a>
         </div>
@@ -554,7 +554,7 @@
               <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos o número aproximado de pessoas, cores ou sabores de sua preferência..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn--primary btn--block">
               <span>Enviar Pedido de Orçamento</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             </button>
@@ -570,18 +570,18 @@
   <!-- ==============================================
        FOOTER: INFORMAÇÕES, MAPA DO SITE E CRÉDITOS
        ============================================== -->
-  <footer class="footer-area">
-    <div class="container footer-grid">
+  <footer class="footer__area">
+    <div class="container footer__grid">
       
-      <div class="footer-col brand-col">
-        <div class="brand-logo footer-logo">
-          <span class="logo-icon">🎂</span>
-          <div class="logo-text">
-            <span class="logo-title">Doceria da Marta</span>
-            <span class="logo-subtitle">Confeitaria Afetiva</span>
+      <div class="footer__col brand-col">
+        <div class="brand-logo footer__logo">
+          <span class="logo__icon">🎂</span>
+          <div class="logo__text">
+            <span class="logo__title">Doceria da Marta</span>
+            <span class="logo__subtitle">Confeitaria Afetiva</span>
           </div>
         </div>
-        <p class="footer-about">
+        <p class="footer__about">
           Acreditamos que todo grande momento da vida merece ser celebrado com um doce preparado com alma, paciência e afeto genuíno.
         </p>
         <div class="social-links">
@@ -591,9 +591,9 @@
         </div>
       </div>
 
-      <div class="footer-col links-col">
-        <h4 class="footer-heading">Navegação Rápida</h4>
-        <ul class="footer-nav-list">
+      <div class="footer__col links-col">
+        <h4 class="footer__heading">Navegação Rápida</h4>
+        <ul class="footer__nav-list">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sobre">Sobre a Empresa</a></li>
           <li><a href="#servicos">Nossos Serviços</a></li>
@@ -602,8 +602,8 @@
         </ul>
       </div>
 
-      <div class="footer-col hours-col">
-        <h4 class="footer-heading">Horários & Local</h4>
+      <div class="footer__col hours-col">
+        <h4 class="footer__heading">Horários & Local</h4>
         <p><strong>Ateliê de Retiradas:</strong></p>
         <p>Rua das Amendoeiras, 452 - Jardins, SP</p>
         <p><strong>Terça a Sexta:</strong> 09h às 19h</p>
@@ -613,10 +613,10 @@
 
     </div>
 
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
+    <div class="footer__bottom">
+      <div class="container footer__bottom--flex">
         <p>&copy; 2026 Doceria da Marta Ltda. Todos os direitos reservados.</p>
-        <p class="footer-credit">Feito com paixão e confeitaria de excelência.</p>
+        <p class="footer__credit">Feito com paixão e confeitaria de excelência.</p>
       </div>
     </div>
   </footer>

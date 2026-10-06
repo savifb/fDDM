@@ -1,31 +1,30 @@
-.footer-grid {
+@use '../abstracts/variables' as v;
+
+.footer__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr;
   gap: clamp(2rem, 5vw, 4rem);
   padding-bottom: 3.5rem;
 }
 @media (max-width: 1024px) {
-  .footer-grid {
+  .footer__grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 768px) {
-  .footer-grid {
+  .footer__grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
 
-.footer-logo .brand-logo__title,
-.footer-logo .logo-title,
-.footer-area__logo .brand-logo__title,
-.footer-area__logo .logo-title {
-  color: #FEE8EC;
+.footer__logo {
+  color: v.$color-text-main;
 }
 
-.footer-about,
-.footer-area__about {
-  color: #B5A4A0;
+.footer__about,
+.footer__area__about {
+  color: v.$color-text-muted;
   font-size: 0.9375rem;
   line-height: 1.7;
   margin: 1.25rem 0 1.75rem;
@@ -38,7 +37,7 @@
 }
 .social-links__btn,
 .social-links .social-btn {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: v.$color-primary;
   color: #FDFBF9;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -48,54 +47,52 @@
 }
 .social-links__btn:hover,
 .social-links .social-btn:hover {
-  background-color: #9C3D54;
+  background-color: v.$color-primary-hover;
   transform: translateY(-2px);
 }
 
-.footer-heading,
-.footer-area__heading {
+.footer__heading{
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.15rem;
-  color: #FFFFFF;
+  color: v.$color-primary;
   margin-bottom: 1.25rem;
   font-weight: 600;
 }
 
-.footer-nav-list,
-.footer-area__nav-list {
+.footer__nav-list{
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
-.footer-nav-list a,
-.footer-area__nav-list a {
-  color: #B5A4A0;
+.footer__nav-list a, a {
+  color: v.$color-text-muted;
   font-size: 0.9375rem;
 }
-.footer-nav-list a:hover,
-.footer-area__nav-list a:hover {
-  color: #E8A87C;
+.footer__nav-list a:hover{
+  color: v.$color-primary-hover;
   padding-left: 4px;
 }
 
 .hours-col p,
-.footer-area__hours p {
-  color: #B5A4A0;
+.footer__area__hours p {
+  color: v.$color-text-muted;
   font-size: 0.9375rem;
   margin-bottom: 0.5rem;
 }
 .hours-col strong,
-.footer-area__hours strong {
-  color: #FFFFFF;
+.footer__area__hours strong {
+  color: v.$color-text-main;
+  text-align: left;
+
 }
 
-.footer-bottom {
+.footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.75rem 0;
   font-size: 0.8125rem;
   color: #9C8985;
 }
-.footer-bottom-flex, .footer-bottom__flex {
+.footer__bottom--flex, .footer__bottom__flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,13 +100,13 @@
   gap: 1rem;
 }
 @media (max-width: 768px) {
-  .footer-bottom-flex, .footer-bottom__flex {
+  .footer__bottom--flex, .footer__bottom__flex {
     flex-direction: column;
     text-align: center;
   }
 }
 
-.footer-credit,
-.footer-area__credit {
+.footer__credit,
+.footer__area__credit {
   color: inherit;
 }

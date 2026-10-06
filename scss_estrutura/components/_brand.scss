@@ -4,24 +4,20 @@
   gap: 0.75rem;
   text-decoration: none;
 }
-.brand-logo__icon,
-.brand-logo .logo-icon {
+.brand-logo__icon{
   font-size: 2.25rem;
   line-height: 1;
   filter: drop-shadow(0 4px 8px rgba(156, 61, 84, 0.25));
   transition: transform 0.2s ease;
 }
-.brand-logo:hover .brand-logo__icon,
-.brand-logo:hover .logo-icon {
+.brand-logo:hover {
   transform: scale(1.1) rotate(-6deg);
 }
-.brand-logo__text,
-.brand-logo .logo-text {
+.brand-logo__text {
   display: flex;
   flex-direction: column;
 }
-.brand-logo__title,
-.brand-logo .logo-title {
+.brand-logo__title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.4rem;
   font-weight: 700;
@@ -29,8 +25,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
-.brand-logo__subtitle,
-.brand-logo .logo-subtitle {
+.brand-logo__subtitle{
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
