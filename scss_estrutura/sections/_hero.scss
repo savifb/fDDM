@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as v;
+
 .hero-banner {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -14,25 +16,21 @@
     gap: 3rem;
   }
 }
-.hero-banner__content,
-.hero-banner .hero-content {
+.hero-banner__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 @media (max-width: 1024px) {
-  .hero-banner__content,
-  .hero-banner .hero-content {
+  .hero-banner__content {
     align-items: center;
   }
 }
-.hero-banner__badge,
-.hero-banner .hero-badge {
+.hero-banner__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #FDF2F4;
-  color: #9C3D54;
+  background: linear-gradient(135deg, #f1eced 0%, #f3bfc6 100%);
   padding: 0.45rem 1.1rem;
   border-radius: 9999px;
   font-size: 0.8125rem;
@@ -40,8 +38,7 @@
   width: fit-content;
   border: 1px solid rgba(156, 61, 84, 0.15);
 }
-.hero-banner__title,
-.hero-banner .hero-title {
+.hero-banner__title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   line-height: 1.15;
@@ -49,29 +46,26 @@
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-.hero-banner__title .highlight-text, .hero-banner__title__highlight,
-.hero-banner .hero-title .highlight-text,
-.hero-banner .hero-title__highlight {
-  color: #9C3D54;
+.hero-banner__title span.highlight-text {
+  color: #D48149;
   font-style: italic;
   position: relative;
   display: inline-block;
 }
-.hero-banner__description,
-.hero-banner .hero-description {
+.hero-banner__description{
   font-size: clamp(1rem, 1.3vw, 1.18rem);
-  color: #735D58;
+  color: #3a2e2b;
   max-width: 36rem;
   line-height: 1.7;
 }
+
 @media (max-width: 1024px) {
-  .hero-banner__description,
-  .hero-banner .hero-description {
+  .hero-banner__description{
     margin: 0 auto;
   }
 }
-.hero-banner__cta-group,
-.hero-banner .hero-cta-group {
+
+.hero-banner__cta-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;

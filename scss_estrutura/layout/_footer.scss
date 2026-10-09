@@ -22,8 +22,7 @@
   color: v.$color-text-main;
 }
 
-.footer__about,
-.footer__area__about {
+.footer__about {
   color: v.$color-text-muted;
   font-size: 0.9375rem;
   line-height: 1.7;
@@ -35,18 +34,16 @@
   display: flex;
   gap: 0.75rem;
 }
-.social-links__btn,
-.social-links .social-btn {
+.social-btn {
   background-color: v.$color-primary;
-  color: #FDFBF9;
+  color: v.$color-surface;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 0.8125rem;
   font-weight: 500;
   transition: all 0.2s ease;
 }
-.social-links__btn:hover,
-.social-links .social-btn:hover {
+ .social-btn:hover {
   background-color: v.$color-primary-hover;
   transform: translateY(-2px);
 }
@@ -90,9 +87,9 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.75rem 0;
   font-size: 0.8125rem;
-  color: #9C8985;
+  color: v.$color-text-muted;
 }
-.footer__bottom--flex, .footer__bottom__flex {
+.footer__bottom--flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,13 +97,13 @@
   gap: 1rem;
 }
 @media (max-width: 768px) {
-  .footer__bottom--flex, .footer__bottom__flex {
+  .footer__bottom--flex {
     flex-direction: column;
     text-align: center;
   }
 }
 
-.footer__credit,
-.footer__area__credit {
-  color: inherit;
+.footer__credit
+{
+  color: v.$color-text-muted;
 }

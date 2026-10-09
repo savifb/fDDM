@@ -53,51 +53,6 @@ ul {
   outline-offset: 3px;
 }
 
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
-========
-=======
->>>>>>> Stashed changes
-:root {
-  --color-primary: #9C3D54;
-  --color-primary-hover: #7D283E;
-  --color-primary-light: #FDF2F4;
-  --color-secondary: #D48149;
-  --color-secondary-hover: #B7652E;
-  --color-accent: #E8A87C;
-  --color-bg-main: #FFF8F4;
-  --color-surface: #FFFFFF;
-  --color-surface-soft: #FFF1EB;
-  --color-border: #F0D9D0;
-  --color-text-main: #2D1D1B;
-  --color-text-muted: #735D58;
-  --color-text-light: #FDFBF9;
-  --font-serif: Playfair Display, Georgia, serif;
-  --font-sans: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
-  --font-size-xs: 0.8125rem;
-  --font-size-sm: 0.9375rem;
-  --font-size-base: 1.0625rem;
-  --font-size-md: 1.25rem;
-  --font-size-lg: 1.5rem;
-  --font-size-xl: clamp(1.75rem, 3vw, 2.25rem);
-  --font-size-2xl: clamp(2.25rem, 5vw, 3.5rem);
-  --shadow-sm: 0 4px 12px rgba(92, 40, 31, 0.05);
-  --shadow-md: 0 10px 28px rgba(92, 40, 31, 0.08);
-  --shadow-lg: 0 20px 40px rgba(92, 40, 31, 0.12);
-  --shadow-colored: 0 12px 28px rgba(156, 61, 84, 0.22);
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.5rem;
-  --radius-full: 9999px;
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  --container-max: 75rem;
-}
-
-<<<<<<< Updated upstream
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .text-center {
   text-align: center;
 }
@@ -153,8 +108,6 @@ ul {
   padding-right: clamp(1rem, 2vw + 0.5rem, 2.5rem);
 }
 
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 .footer__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr;
@@ -177,8 +130,7 @@ ul {
   color: #2D1D1B;
 }
 
-.footer__about,
-.footer__area__about {
+.footer__about {
   color: #735D58;
   font-size: 0.9375rem;
   line-height: 1.7;
@@ -191,10 +143,9 @@ ul {
   gap: 0.75rem;
 }
 
-.social-links__btn,
-.social-links .social-btn {
+.social-btn {
   background-color: #9C3D54;
-  color: #FDFBF9;
+  color: #FFFFFF;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 0.8125rem;
@@ -202,8 +153,7 @@ ul {
   transition: all 0.2s ease;
 }
 
-.social-links__btn:hover,
-.social-links .social-btn:hover {
+.social-btn:hover {
   background-color: #7D283E;
   transform: translateY(-2px);
 }
@@ -249,10 +199,10 @@ ul {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.75rem 0;
   font-size: 0.8125rem;
-  color: #9C8985;
+  color: #735D58;
 }
 
-.footer__bottom--flex, .footer__bottom__flex {
+.footer__bottom--flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -261,20 +211,15 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .footer__bottom--flex, .footer__bottom__flex {
+  .footer__bottom--flex {
     flex-direction: column;
     text-align: center;
   }
 }
-.footer__credit,
-.footer__area__credit {
-  color: inherit;
+.footer__credit {
+  color: #735D58;
 }
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .navbar {
   position: sticky;
   top: 0;
@@ -286,13 +231,8 @@ ul {
   border-bottom: 1px solid #F0D9D0;
   transition: background-color 0.2s ease;
 }
-<<<<<<< Updated upstream
 
 .navbar__container {
-=======
-.navbar__container,
-.navbar .nav-container {
->>>>>>> Stashed changes
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -301,26 +241,15 @@ ul {
   margin: 0 auto;
   padding: 1rem clamp(1rem, 4vw, 2.5rem);
 }
-<<<<<<< Updated upstream
 
 .navbar__links {
-=======
-.navbar__links,
-.navbar .nav-links {
->>>>>>> Stashed changes
   display: flex;
   align-items: center;
   gap: clamp(1.25rem, 2.5vw, 2.25rem);
 }
-<<<<<<< Updated upstream
 
 @media (max-width: 768px) {
   .navbar__links {
-=======
-@media (max-width: 768px) {
-  .navbar__links,
-  .navbar .nav-links {
->>>>>>> Stashed changes
     position: fixed;
     top: 0;
     right: -100%;
@@ -337,44 +266,25 @@ ul {
     z-index: 99;
     padding: 2rem;
   }
-<<<<<<< Updated upstream
   .navbar__links.active {
     right: 0;
   }
 }
 .navbar__item {
-=======
-  .navbar__links.active, .navbar__links--active,
-  .navbar .nav-links.active,
-  .navbar .nav-links--active {
-    right: 0;
-  }
-}
-.navbar__item,
-.navbar .nav-item {
->>>>>>> Stashed changes
   font-weight: 500;
   font-size: 0.9375rem;
   color: #2D1D1B;
   position: relative;
   padding: 0.35rem 0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 768px) {
   .navbar__item,
   .navbar .nav-item {
     font-size: 1.15rem;
   }
 }
-<<<<<<< Updated upstream
 .navbar__item::after {
-=======
-.navbar__item::after,
-.navbar .nav-item::after {
->>>>>>> Stashed changes
   content: "";
   position: absolute;
   left: 0;
@@ -384,7 +294,6 @@ ul {
   background-color: #9C3D54;
   transition: width 0.2s ease;
 }
-<<<<<<< Updated upstream
 
 .navbar__item:hover {
   color: #9C3D54;
@@ -405,108 +314,19 @@ ul {
     justify-content: space-between;
   }
 }
-=======
-.navbar__item:hover,
-.navbar .nav-item:hover {
-  color: #9C3D54;
-}
-.navbar__item:hover::after,
-.navbar .nav-item:hover::after {
-  width: 100%;
-}
-.navbar__item--cta, .navbar__item.nav-btn-cta,
-.navbar .nav-item--cta,
-.navbar .nav-item.nav-btn-cta {
-  background-color: #9C3D54;
-  color: #FDFBF9 !important;
-  padding: 0.65rem 1.4rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  box-shadow: 0 12px 28px rgba(156, 61, 84, 0.22);
-  transition: all 0.2s ease;
-}
-.navbar__item--cta::after, .navbar__item.nav-btn-cta::after,
-.navbar .nav-item--cta::after,
-.navbar .nav-item.nav-btn-cta::after {
-  display: none;
-}
-.navbar__item--cta:hover, .navbar__item.nav-btn-cta:hover,
-.navbar .nav-item--cta:hover,
-.navbar .nav-item.nav-btn-cta:hover {
-  background-color: #7D283E;
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(156, 61, 84, 0.3);
-}
-.navbar__menu-btn,
-.navbar .mobile-menu-btn {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2rem;
-  height: 1.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 101;
-}
-@media (max-width: 768px) {
-  .navbar__menu-btn,
-  .navbar .mobile-menu-btn {
-    display: flex;
-  }
-}
-.navbar__menu-btn .bar, .navbar__menu-btn__bar,
-.navbar .mobile-menu-btn .bar,
-.navbar .mobile-menu-btn__bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #9C3D54;
-  border-radius: 2px;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.navbar__menu-btn.open .bar:nth-child(1), .navbar__menu-btn.open__bar:nth-child(1), .navbar__menu-btn--open .bar:nth-child(1), .navbar__menu-btn--open__bar:nth-child(1),
-.navbar .mobile-menu-btn.open .bar:nth-child(1),
-.navbar .mobile-menu-btn.open__bar:nth-child(1),
-.navbar .mobile-menu-btn--open .bar:nth-child(1),
-.navbar .mobile-menu-btn--open__bar:nth-child(1) {
-  transform: translateY(10.5px) rotate(45deg);
-}
-.navbar__menu-btn.open .bar:nth-child(2), .navbar__menu-btn.open__bar:nth-child(2), .navbar__menu-btn--open .bar:nth-child(2), .navbar__menu-btn--open__bar:nth-child(2),
-.navbar .mobile-menu-btn.open .bar:nth-child(2),
-.navbar .mobile-menu-btn.open__bar:nth-child(2),
-.navbar .mobile-menu-btn--open .bar:nth-child(2),
-.navbar .mobile-menu-btn--open__bar:nth-child(2) {
-  opacity: 0;
-}
-.navbar__menu-btn.open .bar:nth-child(3), .navbar__menu-btn.open__bar:nth-child(3), .navbar__menu-btn--open .bar:nth-child(3), .navbar__menu-btn--open__bar:nth-child(3),
-.navbar .mobile-menu-btn.open .bar:nth-child(3),
-.navbar .mobile-menu-btn.open__bar:nth-child(3),
-.navbar .mobile-menu-btn--open .bar:nth-child(3),
-.navbar .mobile-menu-btn--open__bar:nth-child(3) {
-  transform: translateY(-10.5px) rotate(-45deg);
-}
-
->>>>>>> Stashed changes
 .brand-logo {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
 }
-<<<<<<< Updated upstream
 
 .brand-logo__icon {
-=======
-.brand-logo__icon,
-.brand-logo .logo-icon {
->>>>>>> Stashed changes
   font-size: 2.25rem;
   line-height: 1;
   filter: drop-shadow(0 4px 8px rgba(156, 61, 84, 0.25));
   transition: transform 0.2s ease;
 }
-<<<<<<< Updated upstream
 
 .brand-logo:hover {
   transform: scale(1.1) rotate(-6deg);
@@ -518,19 +338,6 @@ ul {
 }
 
 .brand-logo__title {
-=======
-.brand-logo:hover .brand-logo__icon,
-.brand-logo:hover .logo-icon {
-  transform: scale(1.1) rotate(-6deg);
-}
-.brand-logo__text,
-.brand-logo .logo-text {
-  display: flex;
-  flex-direction: column;
-}
-.brand-logo__title,
-.brand-logo .logo-title {
->>>>>>> Stashed changes
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.4rem;
   font-weight: 700;
@@ -538,13 +345,8 @@ ul {
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
-<<<<<<< Updated upstream
 
 .brand-logo__subtitle {
-=======
-.brand-logo__subtitle,
-.brand-logo .logo-subtitle {
->>>>>>> Stashed changes
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -566,72 +368,41 @@ ul {
   border: none;
   text-decoration: none;
 }
-<<<<<<< Updated upstream
 
 .btn--primary {
-=======
-.btn--primary, .btn-primary {
->>>>>>> Stashed changes
   background-color: #9C3D54;
   color: #FDFBF9;
   box-shadow: 0 12px 28px rgba(156, 61, 84, 0.22);
 }
-<<<<<<< Updated upstream
 
 .btn--primary:hover {
-=======
-.btn--primary:hover, .btn-primary:hover {
->>>>>>> Stashed changes
   background-color: #7D283E;
   transform: translateY(-2px);
   box-shadow: 0 16px 32px rgba(156, 61, 84, 0.32);
 }
-<<<<<<< Updated upstream
 
 .btn--outline {
-=======
-.btn--outline, .btn-outline {
->>>>>>> Stashed changes
   background-color: transparent;
   color: #9C3D54;
   border: 2px solid #9C3D54;
 }
-<<<<<<< Updated upstream
 
 .btn--outline:hover {
-=======
-.btn--outline:hover, .btn-outline:hover {
->>>>>>> Stashed changes
   background-color: #FDF2F4;
   color: #7D283E;
   transform: translateY(-2px);
 }
-<<<<<<< Updated upstream
 
 .btn--block {
-=======
-.btn--block, .btn-block {
->>>>>>> Stashed changes
   width: 100%;
   padding: 1.05rem;
   margin-top: 0.5rem;
 }
-<<<<<<< Updated upstream
 
 .btn__arrow {
   transform: translateX(4px);
   transition: transform 0.2s ease;
 }
-=======
-.btn__arrow,
-.btn .btn-arrow {
-  transition: transform 0.2s ease;
-}
-.btn:hover .btn__arrow,
-.btn:hover .btn-arrow {
-  transform: translateX(4px);
-}
->>>>>>> Stashed changes
 
 .hero-banner {
   display: grid;
@@ -642,10 +413,7 @@ ul {
   margin: 0 auto;
   padding: clamp(3rem, 7vw, 6rem) clamp(1rem, 4vw, 2.5rem);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .hero-banner {
     grid-template-columns: 1fr;
@@ -653,29 +421,22 @@ ul {
     gap: 3rem;
   }
 }
-.hero-banner__content,
-.hero-banner .hero-content {
+.hero-banner__content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
-  .hero-banner__content,
-  .hero-banner .hero-content {
+  .hero-banner__content {
     align-items: center;
   }
 }
-.hero-banner__badge,
-.hero-banner .hero-badge {
+.hero-banner__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #FDF2F4;
-  color: #9C3D54;
+  background: linear-gradient(135deg, #f1eced 0%, #f3bfc6 100%);
   padding: 0.45rem 1.1rem;
   border-radius: 9999px;
   font-size: 0.8125rem;
@@ -683,12 +444,8 @@ ul {
   width: fit-content;
   border: 1px solid rgba(156, 61, 84, 0.15);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-.hero-banner__title,
-.hero-banner .hero-title {
+.hero-banner__title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   line-height: 1.15;
@@ -696,51 +453,34 @@ ul {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-.hero-banner__title .highlight-text, .hero-banner__title__highlight,
-.hero-banner .hero-title .highlight-text,
-.hero-banner .hero-title__highlight {
-  color: #9C3D54;
+.hero-banner__title span.highlight-text {
+  color: #D48149;
   font-style: italic;
   position: relative;
   display: inline-block;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-.hero-banner__description,
-.hero-banner .hero-description {
+.hero-banner__description {
   font-size: clamp(1rem, 1.3vw, 1.18rem);
-  color: #735D58;
+  color: #3a2e2b;
   max-width: 36rem;
   line-height: 1.7;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
-  .hero-banner__description,
-  .hero-banner .hero-description {
+  .hero-banner__description {
     margin: 0 auto;
   }
 }
-.hero-banner__cta-group,
-.hero-banner .hero-cta-group {
+.hero-banner__cta-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
   align-items: center;
   margin-top: 0.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .hero-banner__cta-group,
   .hero-banner .hero-cta-group {
@@ -756,10 +496,7 @@ ul {
   border-top: 1px solid #F0D9D0;
   margin-top: 1rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .hero-banner__trust-bar,
   .hero-banner .hero-trust-bar {
@@ -778,20 +515,14 @@ ul {
 .hero-banner .hero-media {
   position: relative;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .hero-banner__image-wrapper,
 .hero-banner .hero-image-wrapper {
   position: relative;
   border-radius: 1.5rem;
   overflow: visible;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .hero-banner__image-wrapper,
   .hero-banner .hero-image-wrapper {
@@ -805,10 +536,7 @@ ul {
 .hero-banner .hero-image-wrapper:hover .hero-img {
   transform: scale(1.02);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .hero-banner__img,
 .hero-banner .hero-img {
   width: 100%;
@@ -818,20 +546,13 @@ ul {
   box-shadow: 0 20px 40px rgba(92, 40, 31, 0.12);
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .hero-banner__img,
   .hero-banner .hero-img {
     height: 22rem;
   }
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .trust-item,
 .hero-banner__trust-item {
   display: flex;
@@ -860,20 +581,13 @@ ul {
   height: 2.25rem;
   background-color: #F0D9D0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 480px) {
   .trust-divider,
   .hero-banner__trust-divider {
     display: none;
   }
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .floating-tag {
   position: absolute;
   display: flex;
@@ -888,42 +602,27 @@ ul {
   box-shadow: 0 10px 28px rgba(92, 40, 31, 0.08);
   animation: float 4s ease-in-out infinite;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .floating-tag strong {
   display: block;
   font-size: 0.8125rem;
   color: #2D1D1B;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .floating-tag small {
   font-size: 0.75rem;
   color: #735D58;
 }
-<<<<<<< Updated upstream
 
 .floating-tag .tag-emoji, .floating-tag__emoji {
   font-size: 1.6rem;
 }
 
-=======
-.floating-tag .tag-emoji, .floating-tag__emoji {
-  font-size: 1.6rem;
-}
->>>>>>> Stashed changes
 .floating-tag--1, .floating-tag-1 {
   top: -1.25rem;
   left: -1.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 768px) {
   .floating-tag--1, .floating-tag-1 {
     top: -0.75rem;
@@ -935,17 +634,13 @@ ul {
   right: -1.5rem;
   animation-delay: 2s;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 768px) {
   .floating-tag--2, .floating-tag-2 {
     bottom: -1rem;
     right: 0;
   }
 }
-<<<<<<< Updated upstream
 .section-about {
   padding: clamp(4rem, 8vw, 7rem) 0;
   background-color: #FFFFFF;
@@ -953,55 +648,23 @@ ul {
   border-bottom: 1px solid #F0D9D0;
 }
 
-<<<<<<<< Updated upstream:css/estilo.css
-========
-=======
-
->>>>>>> Stashed changes
-.section-about {
-  padding: clamp(4rem, 8vw, 7rem) 0;
-  background-color: #FFFFFF;
-  border-top: 1px solid #F0D9D0;
-  border-bottom: 1px solid #F0D9D0;
-}
-<<<<<<< Updated upstream
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .section-about__grid, .section-about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
   gap: clamp(2.5rem, 6vw, 5rem);
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .section-about__grid, .section-about-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
-========
-
->>>>>>>> Stashed changes:css/estilos.css
 .about-media {
   position: relative;
 }
 
-=======
-
-.about-media {
-  position: relative;
-}
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .about-media {
     max-width: 32rem;
@@ -1013,10 +676,7 @@ ul {
   position: relative;
   border-radius: 1.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .about-media__img,
 .about-media .about-img {
   width: 100%;
@@ -1025,20 +685,13 @@ ul {
   border-radius: 1.5rem;
   box-shadow: 0 10px 28px rgba(92, 40, 31, 0.08);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .about-media__img,
   .about-media .about-img {
     height: 24rem;
   }
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 .experience-badge {
   position: absolute;
   bottom: -1.75rem;
@@ -1051,10 +704,7 @@ ul {
   text-align: center;
   max-width: 12rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 480px) {
   .experience-badge {
     position: static;
@@ -1069,10 +719,7 @@ ul {
   font-weight: 700;
   line-height: 1;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .experience-badge .exp-text {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -1104,10 +751,7 @@ ul {
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .copy-body .lead-text {
   font-size: 1.15rem;
   font-weight: 500;
@@ -1123,20 +767,14 @@ ul {
   padding-top: 1.75rem;
   border-top: 1px solid #F0D9D0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .brand-pillars__item,
 .brand-pillars .pillar-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .brand-pillars__icon,
 .brand-pillars .pillar-icon {
   font-size: 1.75rem;
@@ -1149,10 +787,7 @@ ul {
   justify-content: center;
   border-radius: 1rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .brand-pillars__title,
 .brand-pillars .pillar-title {
   font-size: 1.0625rem;
@@ -1160,10 +795,7 @@ ul {
   color: #2D1D1B;
   margin-bottom: 0.25rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .brand-pillars__desc,
 .brand-pillars .pillar-desc {
   font-size: 0.9375rem;
@@ -1176,13 +808,7 @@ ul {
   grid-template-rows: auto auto auto;
   gap: 2.5rem;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .section-services__grid, .section-services-footer-grid,
 .section-services .services-footer-grid {
   display: grid;
@@ -1190,27 +816,13 @@ ul {
   gap: 1.5rem;
   margin-top: 1rem;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .section-services__grid, .section-services-footer-grid,
   .section-services .services-footer-grid {
     grid-template-columns: 1fr;
   }
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
-========
-
->>>>>>>> Stashed changes:css/estilos.css
-=======
-
->>>>>>> Stashed changes
 .services-header-cell {
   display: flex;
   flex-direction: column;
@@ -1234,10 +846,7 @@ ul {
   gap: 1.25rem;
   margin-top: 0.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 480px) {
   .carousel-controls {
     flex-wrap: wrap;
@@ -1259,10 +868,7 @@ ul {
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
   transition: all 0.2s ease;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .carousel-controls__arrow:hover,
 .carousel-controls .carousel-arrow:hover {
   background-color: #9C3D54;
@@ -1271,10 +877,7 @@ ul {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(156, 61, 84, 0.22);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .carousel-controls__hint,
 .carousel-controls .carousel-hint {
   font-size: 0.8125rem;
@@ -1301,25 +904,16 @@ ul {
   scrollbar-width: thin;
   scrollbar-color: #D48149 transparent;
 }
-<<<<<<< Updated upstream
 
 .services-carousel-track::-webkit-scrollbar {
   height: 8px;
 }
 
-=======
-.services-carousel-track::-webkit-scrollbar {
-  height: 8px;
-}
->>>>>>> Stashed changes
 .services-carousel-track::-webkit-scrollbar-track {
   background: rgba(240, 217, 208, 0.4);
   border-radius: 4px;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .services-carousel-track::-webkit-scrollbar-thumb {
   background: #D48149;
   border-radius: 4px;
@@ -1337,10 +931,7 @@ ul {
   border: 1px solid #F0D9D0;
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 480px) {
   .service-card {
     flex: 0 0 88vw;
@@ -1351,28 +942,19 @@ ul {
   box-shadow: 0 20px 40px rgba(92, 40, 31, 0.12);
   border-color: rgba(156, 61, 84, 0.3);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card:hover .service-card__img,
 .service-card:hover .service-img {
   transform: scale(1.08);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__media,
 .service-card .service-media {
   position: relative;
   height: 14rem;
   overflow: hidden;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__img,
 .service-card .service-img {
   width: 100%;
@@ -1380,10 +962,7 @@ ul {
   object-fit: cover;
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__tag,
 .service-card .service-tag {
   position: absolute;
@@ -1399,10 +978,7 @@ ul {
   border-radius: 9999px;
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__info,
 .service-card .service-info {
   display: flex;
@@ -1410,10 +986,7 @@ ul {
   flex-grow: 1;
   padding: 1.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__category,
 .service-card .service-category {
   font-size: 0.8125rem;
@@ -1423,10 +996,7 @@ ul {
   font-weight: 700;
   margin-bottom: 0.4rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__name,
 .service-card .service-name {
   font-family: "Playfair Display", Georgia, serif;
@@ -1436,10 +1006,7 @@ ul {
   line-height: 1.3;
   margin-bottom: 0.75rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__desc,
 .service-card .service-desc {
   font-size: 0.9375rem;
@@ -1447,10 +1014,7 @@ ul {
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__features,
 .service-card .service-features {
   display: flex;
@@ -1460,10 +1024,7 @@ ul {
   padding-top: 1rem;
   border-top: 1px dashed #F0D9D0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__features li,
 .service-card .service-features li {
   font-size: 0.84rem;
@@ -1472,20 +1033,14 @@ ul {
   align-items: center;
   gap: 0.5rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__features li::before,
 .service-card .service-features li::before {
   content: "✓";
   color: #9C3D54;
   font-weight: 800;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__link,
 .service-card .service-link {
   margin-top: auto;
@@ -1496,10 +1051,7 @@ ul {
   color: #9C3D54;
   transition: gap 0.2s ease, color 0.2s ease;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-card__link:hover,
 .service-card .service-link:hover {
   color: #7D283E;
@@ -1516,10 +1068,7 @@ ul {
   border: 1px solid #F0D9D0;
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-stat-card .stat-icon {
   font-size: 2rem;
   background-color: #FFF1EB;
@@ -1531,20 +1080,14 @@ ul {
   justify-content: center;
   flex-shrink: 0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-stat-card .stat-text h4 {
   font-size: 1.05rem;
   font-weight: 600;
   color: #2D1D1B;
   margin-bottom: 0.25rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .service-stat-card .stat-text p {
   font-size: 0.8125rem;
   color: #735D58;
@@ -1556,26 +1099,14 @@ ul {
   background-color: #FFFFFF;
   border-top: 1px solid #F0D9D0;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .section-testimonials__grid,
 .section-testimonials .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .section-testimonials__grid,
   .section-testimonials .testimonials-grid {
@@ -1584,14 +1115,6 @@ ul {
     margin: 0 auto;
   }
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
-========
-
->>>>>>>> Stashed changes:css/estilos.css
-=======
-
->>>>>>> Stashed changes
 .testimonials-header {
   text-align: center;
   max-width: 44rem;
@@ -1609,18 +1132,12 @@ ul {
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 28px rgba(92, 40, 31, 0.08);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__quote-icon,
 .testimonial-card .card-quote-icon {
   font-family: "Playfair Display", Georgia, serif;
@@ -1632,10 +1149,7 @@ ul {
   right: 1.5rem;
   user-select: none;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__stars,
 .testimonial-card .rating-stars {
   color: #F5A623;
@@ -1643,10 +1157,7 @@ ul {
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__text,
 .testimonial-card .testimonial-text {
   font-size: 0.98rem;
@@ -1656,10 +1167,7 @@ ul {
   margin-bottom: 1.75rem;
   flex-grow: 1;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__author,
 .testimonial-card .testimonial-author {
   display: flex;
@@ -1668,10 +1176,7 @@ ul {
   padding-top: 1.25rem;
   border-top: 1px solid #F0D9D0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__avatar,
 .testimonial-card .author-avatar {
   width: 3.25rem;
@@ -1680,10 +1185,7 @@ ul {
   object-fit: cover;
   border: 2px solid #9C3D54;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__name,
 .testimonial-card .author-name {
   display: block;
@@ -1692,10 +1194,7 @@ ul {
   font-size: 1rem;
   color: #2D1D1B;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .testimonial-card__event,
 .testimonial-card .author-event {
   display: block;
@@ -1708,13 +1207,7 @@ ul {
   padding: clamp(4rem, 8vw, 7rem) 0;
   background-color: #FFF8F4;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .section-contact__grid,
 .section-contact .contact-grid-layout {
   display: grid;
@@ -1722,27 +1215,13 @@ ul {
   gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: flex-start;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 @media (max-width: 1024px) {
   .section-contact__grid,
   .section-contact .contact-grid-layout {
     grid-template-columns: 1fr;
   }
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
-========
-
->>>>>>>> Stashed changes:css/estilos.css
-=======
-
->>>>>>> Stashed changes
 .contact-info-panel {
   display: flex;
   flex-direction: column;
@@ -1771,10 +1250,7 @@ ul {
   border: 1px solid #F0D9D0;
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .channel-card__icon,
 .channel-card .channel-icon {
   font-size: 1.75rem;
@@ -1787,19 +1263,13 @@ ul {
   justify-content: center;
   flex-shrink: 0;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .channel-card strong {
   display: block;
   font-size: 0.95rem;
   color: #2D1D1B;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .channel-card p {
   font-size: 0.9375rem;
   color: #735D58;
@@ -1826,13 +1296,7 @@ ul {
   flex-direction: column;
   gap: 1.25rem;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .contact-form__title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1.6rem;
@@ -1840,23 +1304,14 @@ ul {
   color: #2D1D1B;
   margin-bottom: 1.5rem;
 }
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 
-========
->>>>>>>> Stashed changes:css/estilos.css
-=======
->>>>>>> Stashed changes
 .contact-form__row,
 .contact-form .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 @media (max-width: 768px) {
   .contact-form__row,
   .contact-form .form-row {
@@ -1869,20 +1324,14 @@ ul {
   flex-direction: column;
   gap: 0.4rem;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form__group label,
 .contact-form .form-group label {
   font-size: 0.8125rem;
   font-weight: 600;
   color: #2D1D1B;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form__group input,
 .contact-form__group select,
 .contact-form__group textarea,
@@ -1897,10 +1346,7 @@ ul {
   color: #2D1D1B;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form__group input:focus,
 .contact-form__group select:focus,
 .contact-form__group textarea:focus,
@@ -1911,10 +1357,7 @@ ul {
   border-color: #9C3D54;
   box-shadow: 0 0 0 3px rgba(156, 61, 84, 0.15);
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form__security-note,
 .contact-form .form-security-note {
   font-size: 0.8rem;
@@ -1923,131 +1366,4 @@ ul {
   margin-top: 0.5rem;
 }
 
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:css/estilo.css
 /*# sourceMappingURL=estilo.css.map */
-========
-=======
->>>>>>> Stashed changes
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding-bottom: 3.5rem;
-}
-@media (max-width: 1024px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-.footer-logo .brand-logo__title,
-.footer-logo .logo-title,
-.footer-area__logo .brand-logo__title,
-.footer-area__logo .logo-title {
-  color: #FEE8EC;
-}
-
-.footer-about,
-.footer-area__about {
-  color: #B5A4A0;
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  margin: 1.25rem 0 1.75rem;
-  max-width: 26rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 0.75rem;
-}
-.social-links__btn,
-.social-links .social-btn {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #FDFBF9;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-.social-links__btn:hover,
-.social-links .social-btn:hover {
-  background-color: #9C3D54;
-  transform: translateY(-2px);
-}
-
-.footer-heading,
-.footer-area__heading {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.15rem;
-  color: #FFFFFF;
-  margin-bottom: 1.25rem;
-  font-weight: 600;
-}
-
-.footer-nav-list,
-.footer-area__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.footer-nav-list a,
-.footer-area__nav-list a {
-  color: #B5A4A0;
-  font-size: 0.9375rem;
-}
-.footer-nav-list a:hover,
-.footer-area__nav-list a:hover {
-  color: #E8A87C;
-  padding-left: 4px;
-}
-
-.hours-col p,
-.footer-area__hours p {
-  color: #B5A4A0;
-  font-size: 0.9375rem;
-  margin-bottom: 0.5rem;
-}
-.hours-col strong,
-.footer-area__hours strong {
-  color: #FFFFFF;
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 1.75rem 0;
-  font-size: 0.8125rem;
-  color: #9C8985;
-}
-.footer-bottom-flex, .footer-bottom__flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-@media (max-width: 768px) {
-  .footer-bottom-flex, .footer-bottom__flex {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-.footer-credit,
-.footer-area__credit {
-  color: inherit;
-}
-
-<<<<<<< Updated upstream
-/*# sourceMappingURL=estilos.css.map */
->>>>>>>> Stashed changes:css/estilos.css
-=======
-/*# sourceMappingURL=estilo.css.map */
->>>>>>> Stashed changes
