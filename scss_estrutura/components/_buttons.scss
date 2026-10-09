@@ -1,7 +1,7 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as *;
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include button-base;
   gap: 0.65rem;
   padding: 0.95rem 2rem;
   border-radius: 9999px;

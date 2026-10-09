@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
 
 .section__services {
   display: grid;
@@ -23,7 +24,8 @@
   align-items: center;
   text-align: center;
   max-width: 48rem;
-  margin: 0 auto;
+  margin:  auto;
+  padding: 2rem;
 }
 .section__title {
   font-family: "Playfair Display", Georgia, serif;
@@ -63,8 +65,7 @@
     justify-content: center;
   }
 }
-.carousel-controls__arrow,
-.carousel-controls .carousel-arrow {
+.carousel-arrow {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -78,16 +79,14 @@
   box-shadow: 0 4px 12px rgba(92, 40, 31, 0.05);
   transition: all 0.2s ease;
 }
-.carousel-controls__arrow:hover,
-.carousel-controls .carousel-arrow:hover {
+ .carousel-arrow:hover {
   background-color: #9C3D54;
   color: #FDFBF9;
   border-color: #9C3D54;
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(156, 61, 84, 0.22);
 }
-.carousel-controls__hint,
-.carousel-controls .carousel-hint {
+ .carousel-hint {
   font-size: 0.8125rem;
   color: #735D58;
   font-weight: 500;
@@ -125,16 +124,13 @@
 }
 
 .service-card {
+  @include card__service--flex;
   flex: 0 0 clamp(290px, 30vw + 10px, 360px);
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  border-radius: 1.5rem;
-  overflow: hidden;
   box-shadow: 0 10px 28px rgba(92, 40, 31, 0.08);
   border: 1px solid #F0D9D0;
   transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+
 }
 @media (max-width: 480px) {
   .service-card {
@@ -146,17 +142,14 @@
   box-shadow: 0 20px 40px rgba(92, 40, 31, 0.12);
   border-color: rgba(156, 61, 84, 0.3);
 }
-.service-card:hover .service-card__img,
-.service-card:hover .service-img {
-  transform: scale(1.08);
-}
+
 .service-card .service-media {
   position: relative;
   height: 14rem;
   overflow: hidden;
 }
-.service-card__img,
 .service-card .service-img {
+  @include card__image--radius;
   width: 100%;
   height: 100%;
   object-fit: cover;

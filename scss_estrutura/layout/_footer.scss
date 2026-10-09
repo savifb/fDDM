@@ -1,5 +1,5 @@
 @use '../abstracts/variables' as v;
-
+@use '../abstracts/mixins' as *;
 .footer__grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1.2fr;
@@ -69,7 +69,6 @@
   color: v.$color-primary-hover;
   padding-left: 4px;
 }
-
 .hours-col p,
 .footer__area__hours p {
   color: v.$color-text-muted;
@@ -90,8 +89,7 @@
   color: v.$color-text-muted;
 }
 .footer__bottom--flex {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;

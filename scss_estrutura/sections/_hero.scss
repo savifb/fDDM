@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
 
 .hero-banner {
   display: grid;
@@ -25,6 +26,9 @@
   .hero-banner__content {
     align-items: center;
   }
+}
+.hero-banner__image--wrapper img{
+  @include card__image--radius;
 }
 .hero-banner__badge {
   display: inline-flex;
@@ -103,7 +107,7 @@
 .hero-media {
   position: relative;
 }
-.hero-banner__image-wrapper{
+.hero-banner__image--wrapper{
   position: relative;
   border-radius: 1.5rem;
   overflow: visible;
