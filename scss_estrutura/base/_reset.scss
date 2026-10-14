@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -10,21 +11,37 @@ html {
   scroll-behavior: smooth;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   width: 100%;
-  min-height: 100%;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+
   background-color: #FFF8F4;
   color: #2D1D1B;
   line-height: 1.65;
   font-size: 1.0625rem;
-  overflow-x: hidden;
+
+  overflow-x: clip;
 }
 
-img {
+img,
+video,
+iframe,
+svg {
   max-width: 100%;
+}
+
+img,
+video {
   height: auto;
   display: block;
 }
@@ -39,6 +56,7 @@ button,
 input,
 textarea,
 select {
+  max-width: 100%;
   font: inherit;
   color: inherit;
 }
@@ -50,4 +68,19 @@ ul {
 :focus-visible {
   outline: 3px solid #D48149;
   outline-offset: 3px;
+}
+
+/* Impede que os itens da grade forcem uma largura maior que a tela */
+.site-grid {
+  width: 100%;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.header-area,
+.main-area,
+.footer__area,
+.container {
+  min-width: 0;
+  max-width: 100%;
 }
