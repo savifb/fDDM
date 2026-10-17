@@ -192,11 +192,10 @@
 
     
     <!-- SEÇÃO DE SERVIÇOS (Disposição em Grid com Carrossel Flexbox) -->
-    <section class="section__services" id="servicos" aria-labelledby="servicos-titulo">
-      <div class="container services-grid-layout">
+    <section class="services" id="servicos" aria-labelledby="servicos-titulo">
         
         <!-- Cabeçalho da Seção de Serviços -->
-        <div class="services__header-cell">
+        <div class="services__header">
           <span class="section__subtitle">O Que Fazemos de Melhor</span>
           <h2 id="servicos-titulo" class="section__title">
             Serviços Confeccionados para Encantar
@@ -206,154 +205,153 @@
           </p>
           
           <!-- Controles do Carrossel -->
-          <div class="carousel-controls" aria-label="Controles do carrossel de serviços">
-            <button class="carousel-arrow prev-btn" id="carouselPrev" aria-label="Serviço anterior">
+          <div class="carousel" aria-label="Controles do carrossel de serviços">
+            <button class="carousel__arrow prev-btn" id="carouselPrev" aria-label="Serviço anterior">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <span class="carousel-hint">Arraste para o lado ou clique nas setas</span>
-            <button class="carousel-arrow next-btn" id="carouselNext" aria-label="Próximo serviço">
+            <span class="carousel__hint">Arraste para o lado ou clique nas setas</span>
+            <button class="carousel__arrow next-btn" id="carouselNext" aria-label="Próximo serviço">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
         </div>
 
         <!-- Trilha do Carrossel de Serviços com Flexbox -->
-        <div class="services__carousel--wrapper">
-          <div class="services__carousel--track" id="servicesCarouselTrack" role="region" aria-label="Carrossel de serviços oferecidos">
+        <div class="carousel__wrapper">
+          <div class="carousel__track" id="servicesCarouselTrack" role="region" aria-label="Carrossel de serviços oferecidos">
             
             <!-- Card de Serviço 1 -->
             <article class="service-card">
-              <div class="service-media">
+              <div class="service-card__media">
                 <img 
                   src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" 
                   alt="Bolo decorado com buttercream floral" 
-                  class="service-img"
+                  class="service-card__img"
                   loading="lazy"
                 >
-                <span class="service-tag">Mais Pedido</span>
+                <span class="service-card__tag">Mais Pedido</span>
               </div>
-              <div class="service-info">
-                <div class="service-category">Celebrações</div>
-                <h3 class="service-name">Bolos Artísticos & Personalizados</h3>
-                <p class="service-desc">
+              <div class="service-card__info">
+                <div class="service-card__category">Celebrações</div>
+                <h3 class="service-card__name">Bolos Artísticos & Personalizados</h3>
+                <p class="service-card__desc">
                   Projetos únicos para aniversários, batizados e datas memoráveis. Massas fofíssimas com recheios nobres e decorações em buttercream ou pasta artesanal.
                 </p>
-                <ul class="service-features">
+                <ul class="service-card__features">
                   <li>Projetos sob medida no seu tema</li>
                   <li>Recheios com frutas e chocolates nobres</li>
                   <li>Opções com flores naturais comestíveis</li>
                 </ul>
-                <a href="#contato" class="service-link">Pedir Orçamento &rarr;</a>
+                <a href="#contato" class="service-card__link">Pedir Orçamento &rarr;</a>
               </div>
             </article>
 
             <!-- Card de Serviço 2 -->
             <article class="service-card">
-              <div class="service-media">
+              <div class="service-card__media">
                 <img 
                   src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" 
                   alt="Doces finos, trufas e brigadeiros gourmet para festas" 
-                  class="service-img"
+                  class="service-card__img"
                   loading="lazy"
                 >
-                <span class="service-tag">Casamentos</span>
+                <span class="service-card__tag">Casamentos</span>
               </div>
-              <div class="service-info">
-                <div class="service-category">Alta Confeitaria</div>
-                <h3 class="service-name">Doces Finos para Casamentos</h3>
-                <p class="service-desc">
+              <div class="service-card__info">
+                <div class="service-card__category">Alta Confeitaria</div>
+                <h3 class="service-card__name">Doces Finos para Casamentos</h3>
+                <p class="service-card__desc">
                   Coleções elegantes de trufas belgas, camafeus dourados, bombons pintados à mão e copinhos crocantes que compõem mesas de casamento dignas de conto de fadas.
                 </p>
-                <ul class="service-features">
+                <ul class="service-card__features">
                   <li>Degustação presencial dos sabores</li>
                   <li>Forminhas e montagem personalizada</li>
                   <li>Mais de 40 variedades no cardápio</li>
                 </ul>
-                <a href="#contato" class="service-link">Agendar Degustação &rarr;</a>
+                <a href="#contato" class="service-card__link">Agendar Degustação &rarr;</a>
               </div>
             </article>
 
             <!-- Card de Serviço 3 -->
             <article class="service-card">
-              <div class="service-media">
+              <div class="service-card__media">
                 <img 
                   src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=600&q=80" 
                   alt="Mesa farta de sobremesas e doces para eventos" 
-                  class="service-img"
+                  class="service-card__img"
                   loading="lazy"
                 >
-                <span class="service-tag">Eventos</span>
+                <span class="service-card__tag">Eventos</span>
               </div>
-              <div class="service-info">
-                <div class="service-category">Catering Completo</div>
-                <h3 class="service-name">Mesas de Sobremesa & Cenografia</h3>
-                <p class="service-desc">
+              <div class="service-card__info">
+                <div class="service-card__category">Catering Completo</div>
+                <h3 class="service-card__name">Mesas de Sobremesa & Cenografia</h3>
+                <p class="service-card__desc">
                   Levamos a experiência completa até seu espaço. Planejamento estético, suportes cerâmicos refinados e uma variedade que encanta do início ao fim.
                 </p>
-                <ul class="service-features">
+                <ul class="service-card__features">
                   <li>Consultoria de proporção e cardápio</li>
                   <li>Louças e suportes inclusos no serviço</li>
                   <li>Equipe de reposição especializada</li>
                 </ul>
-                <a href="#contato" class="service-link">Planejar Minha Mesa &rarr;</a>
+                <a href="#contato" class="service-card__link">Planejar Minha Mesa &rarr;</a>
               </div>
             </article>
 
             <!-- Card de Serviço 4 -->
             <article class="service-card">
-              <div class="service-media">
+              <div class="service-card__media">
                 <img 
                   src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80" 
                   alt="Caixa presenteável elegante com doces finos" 
-                  class="service-img"
+                  class="service-card__img"
                   loading="lazy"
                 >
-                <span class="service-tag">Presentes</span>
+                <span class="service-card__tag">Presentes</span>
               </div>
-              <div class="service-info">
-                <div class="service-category">Afeto em Caixas</div>
-                <h3 class="service-name">Kits Presente & Lembrancinhas</h3>
-                <p class="service-desc">
+              <div class="service-card__info">
+                <div class="service-card__category">Afeto em Caixas</div>
+                <h3 class="service-card__name">Kits Presente & Lembrancinhas</h3>
+                <p class="service-card__desc">
                   Caixas rígidas artesanais com laços de cetim, recheadas com macarons franceses, bem-casados fofinhos ou mini bolos decorados.
                 </p>
-                <ul class="service-features">
+                <ul class="service-card__features">
                   <li>Cartão personalizado com caligrafia</li>
                   <li>Lembrancinhas corporativas e de maternidade</li>
                   <li>Embalagens de alta sofisticação</li>
                 </ul>
-                <a href="#contato" class="service-link">Ver Opções de Kits &rarr;</a>
+                <a href="#contato" class="service-card__link">Ver Opções de Kits &rarr;</a>
               </div>
             </article>
 
             <!-- Card de Serviço 5 -->
             <article class="service-card">
-              <div class="service-media">
+              <div class="service-card__media">
                 <img 
                   src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80" 
                   alt="Sobremesas especiais em taças e verrines artesanais" 
-                  class="service-img"
+                  class="service-card__img"
                   loading="lazy"
                 >
-                <span class="service-tag">Gourmet</span>
+                <span class="service-card__tag">Gourmet</span>
               </div>
-              <div class="service-info">
-                <div class="service-category">Empresas & Família</div>
-                <h3 class="service-name">Sobremesas em Taça & Verrines</h3>
-                <p class="service-desc">
+              <div class="service-card__info">
+                <div class="service-card__category">Empresas & Família</div>
+                <h3 class="service-card__name">Sobremesas em Taça & Verrines</h3>
+                <p class="service-card__desc">
                   Mousses aerados, banoffees contemporâneas, cheesecakes de frutas vermelhas e pavês especiais servidos em taças elegantes para seu almoço de domingo.
                 </p>
-                <ul class="service-features">
+                <ul class="service-card__features">
                   <li>Prontas para servir à mesa</li>
                   <li>Tamanhos individuais ou familiares</li>
                   <li>Opções sem glúten e sem lactose</li>
                 </ul>
-                <a href="#contato" class="service-link">Encomendar Agora &rarr;</a>
+                <a href="#contato" class="service-card__link">Encomendar Agora &rarr;</a>
               </div>
             </article>
 
           </div>
         </div>
-      </div>
 
         <!-- Rodapé de Apoio ao Grid de Serviços (Diferenciais) -->
         <div class="service__footer-grid">
